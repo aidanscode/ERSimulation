@@ -1,7 +1,5 @@
 package com.aidanmurphey.ersimulation.models;
 
-import com.aidanmurphey.ersimulation.ERSimulation;
-
 import java.util.Collections;
 import java.util.PriorityQueue;
 
@@ -14,7 +12,7 @@ public class WaitingRoom {
     }
 
     public void seatNewPatient(Patient patient) {
-        patient.setWaitTimeStart(ERSimulation.getSimulationTime());
+        patient.setWaitTimeStart(Simulation.getInstance().getSimulationTime());
 
         queue.add(patient);
     }
