@@ -15,8 +15,7 @@ public class Patient implements Comparable {
         condition = random.nextInt(8) + 1; //Condition is 1-8
         timeToAssist = 5 + (condition * 5); //Between 10-45 minutes to assist a patient (Once they arrive at a ER room)
 
-        waitTimeStart =
-        waitTimeEnd = -1;
+        waitTimeStart = waitTimeEnd = -1;
     }
 
     /**
