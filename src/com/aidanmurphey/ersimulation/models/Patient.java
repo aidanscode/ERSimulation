@@ -2,7 +2,7 @@ package com.aidanmurphey.ersimulation.models;
 
 import java.util.Random;
 
-public class Patient implements Comparable {
+public class Patient implements Comparable<Patient> {
 
     private int condition, waitTimeStart, waitTimeEnd, timeToAssist;
 
@@ -72,9 +72,7 @@ public class Patient implements Comparable {
      * @return An integer representing the value comparison between the two patients
      */
     @Override
-    public int compareTo(Object o) {
-        Patient other = (Patient) o;
-
+    public int compareTo(Patient other) {
         return Integer.compare(this.getCondition(), other.getCondition());
     }
 
